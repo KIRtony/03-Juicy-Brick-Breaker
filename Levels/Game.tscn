@@ -1,0 +1,60 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Paddle/Paddle Container.gd" type="Script" id=1]
+[ext_resource path="res://Ball/Ball Container.gd" type="Script" id=2]
+[ext_resource path="res://Brick/Brick Container.gd" type="Script" id=3]
+[ext_resource path="res://HUD/HUD.gd" type="Script" id=4]
+[ext_resource path="res://Assets/Tianyang Shen_song02_WGCmelody01.wav" type="AudioStream" id=5]
+
+[node name="Game" type="Node2D"]
+
+[node name="Walls" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Walls"]
+polygon = PoolVector2Array( -0.726196, 663.668, -2.84521, 0.444641, 1024.83, 0.444641, 1024.83, 676.382, 1115.95, 676.382, 1118.07, -82.1935, -91.84, -84.3124, -89.7211, 665.787 )
+
+[node name="Paddle Container" type="Node2D" parent="."]
+script = ExtResource( 1 )
+
+[node name="Ball Container" type="Node2D" parent="."]
+script = ExtResource( 2 )
+
+[node name="Brick Container" type="Node2D" parent="."]
+script = ExtResource( 3 )
+
+[node name="HUD" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Score" type="Label" parent="HUD"]
+margin_left = 649.419
+margin_top = 5.3273
+margin_right = 961.419
+margin_bottom = 67.3273
+text = "Score:"
+align = 2
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Lives" type="Label" parent="HUD"]
+margin_left = 9.79988
+margin_top = -0.8909
+margin_right = 335.8
+margin_bottom = 67.1091
+text = "Lives"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+volume_db = -15.0
+autoplay = true
+mix_target = 1

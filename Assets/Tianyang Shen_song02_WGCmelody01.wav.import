@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Tianyang Shen_song02_WGCmelody01.wav-1835755c5d5f84e6fe2360e631041272.sample"
+
+[deps]
+
+source_file="res://Assets/Tianyang Shen_song02_WGCmelody01.wav"
+dest_files=[ "res://.import/Tianyang Shen_song02_WGCmelody01.wav-1835755c5d5f84e6fe2360e631041272.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
