@@ -1,12 +1,19 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Paddle/Paddle Container.gd" type="Script" id=1]
 [ext_resource path="res://Ball/Ball Container.gd" type="Script" id=2]
 [ext_resource path="res://Brick/Brick Container.gd" type="Script" id=3]
 [ext_resource path="res://HUD/HUD.gd" type="Script" id=4]
 [ext_resource path="res://Assets/Tianyang Shen_song02_WGCmelody01.wav" type="AudioStream" id=5]
+[ext_resource path="res://Assets/juicy-oranges-3.png" type="Texture" id=6]
 
 [node name="Game" type="Node2D"]
+
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 509.594, 281.524 )
+scale = Vector2( 0.62508, 0.663438 )
+texture = ExtResource( 6 )
+normal_map = ExtResource( 6 )
 
 [node name="Walls" type="StaticBody2D" parent="."]
 
@@ -56,5 +63,6 @@ __meta__ = {
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 5 )
 volume_db = -15.0
+pitch_scale = 1.04
 autoplay = true
 mix_target = 1
